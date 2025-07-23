@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Virtual OS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="screen-area">
+        <div id="desktop">
+            <div id="taskbar">
+                <button id="left-icon"></button>
+
+                <div id="center-icons">
+                    <div class="taskbar-icon" data-title="Start" id="TaskBar-Start-Icon"><img
+                            src="/asessts/Start-Icon.png" />
+                    </div>
+                    <div class="search-box" data-title="Search">
+                        <input type="text" placeholder="Search" />
+                    </div>
+                    <div class="taskbar-icon" data-title="Desktop"><img src="/asessts/Desktop-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="Teams" id="TaskBar-Desktop-Icon"><img
+                            src="/asessts/Teams-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="Copilot"><img src="/asessts/Copilet-icon.png" /></div>
+                    <div class="taskbar-icon" data-title="Edge"><img src="/asessts/Microsoft-edge.png" /></div>
+                    <div class="taskbar-icon" data-title="Outlook"><img src="/asessts/Outlook-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="Brave"><img src="/asessts/Brave-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="File Manager"><img src="/asessts/File-Manager.png" /></div>
+                    <div class="taskbar-icon" data-title="Dropbox"><img src="/asessts/DropBox.png" /></div>
+                    <div class="taskbar-icon" data-title="Omen Hub"><img src="/asessts/Omen-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="IntelliJ"><img src="/asessts/Intellige-Icon.png" /></div>
+                    <div class="taskbar-icon" data-title="VS Code"><img src="/asessts/Vs-Code-icon.png" /></div>
+                </div>
+
+                <div id="right-section">
+                    <div id="status-box">
+                        <span title="WiFi"><i class="ri-wifi-line"></i></span>
+                        <span title="Battery"><i class="ri-battery-fill"></i></span>
+                        <span title="Volume"><i class="ri-volume-down-line"></i></span>
+                    </div>
+
+                    <div id="clock-container">
+                        <div id="clock">00:00</div>
+                        <div id="date">00/00/0000</div>
+                    </div>
+
+                    <div id="notification-panel">
+                        <div class="icon-scroll">
+                            <div class="icon-grid">
+                                <div class="icon-item"><img
+                                        src="https://img.icons8.com/ios-filled/50/wifi.png" /><span>WiFi</span></div>
+                                <div class="icon-item"><img
+                                        src="https://img.icons8.com/ios-filled/50/bluetooth.png" /><span>Bluetooth</span>
+                                </div>
+                                <div class="icon-item"><img
+                                        src="https://img.icons8.com/ios-filled/50/airplane-mode-on.png" /><span>Airplane</span>
+                                </div>
+                                <div class="icon-item"><i class="ri-battery-saver-fill"></i><span>Battery
+                                        Saver</span></div>
+                                <div class="icon-item"><i class="ri-contrast-2-fill"></i><span>Night
+                                        Light</span></div>
+                                <div class="icon-item"><i class="ri-hotspot-fill"></i><span>Hotspot</span></div>
+                                <div class="icon-item"><i class="ri-accessibility-fill"></i><span>Accessibility</span>
+                                </div>
+
+                                <div class="icon-item"><i class="ri-projector-2-fill"></i><span>Project</span></div>
+                                <div class="icon-item"><img
+                                        src="https://img.icons8.com/ios-filled/50/tv.png" /><span>Cast</span></div>
+                            </div>
+                        </div>
+
+                        <div class="sliders">
+                            <label>🔊 Volume</label>
+                            <input type="range" min="0" max="100" value="50" />
+
+                            <label>🔆 Brightness</label>
+                            <input type="range" id="brightnessSlider" min="30" max="150" value="100" />
+                        </div>
+
+                        <div class="footer">
+                            <span>🔋: 87%</span>
+                            <button>⚙️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contextMenu">
+                <ul>
+                    <li id="view"><i class="ri-gallery-view-2"></i> View</li>
+                    <li id="sortBy"><i class="ri-arrow-up-down-line"></i> Sort By</li>
+                    <li id="refresh"><i class="ri-restart-line"></i> Refresh</li>
+                    <li id="newFolder"><i class="ri-add-circle-line"></i> New Folder</li>
+                    <li id="changeWallpaper"><i class="ri-computer-line"></i> Change Wallpaper</li>
+                    <li id="personalize"><i class="ri-brush-line"></i> personalize</li>
+                    <li id="terminal"><i class="ri-terminal-box-line"></i> Open In Terminal</li>
+                    <li id="setting"><i class="ri-settings-3-fill"></i> Show More Setting</li>
+                </ul>
+            </div>
+            <div id="desktop-icons">
+                <div class="icon myAppIcon" >
+                    <img src="https://images.icon-icons.com/595/PNG/512/Computer_icon-icons.com_55509.png" />
+                    <span>This PC</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/47/PNG/128/trash_full_recycle_delete_delete_9751.png" />
+                    <span>Recycle Bin</span>
+                </div>
+                <div class="icon myAppIcon" >
+                    <img src="https://images.icon-icons.com/2552/PNG/512/edge_browser_logo_icon_152998.png" />
+                    <span>Microsoft Edge</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/1495/PNG/512/code_103074.png" />
+                    <span>VS Code</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/191/PNG/96/Notepad_23093.png" />
+                    <span>Notepad</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/1380/PNG/96/emblemdownloads_93482.png" />
+                    <span>Downloads</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/1011/PNG/96/Google_Drive_icon-icons.com_75713.png" />
+                    <span>Drive</span>
+                </div>
+                <div class="icon myAppIcon">
+                    <img src="https://images.icon-icons.com/56/PNG/96/_Metroprojects_11269.png" />
+                    <span>Projects</span>
+                </div>
+            </div>
+            <div id="start-menu">
+                <input type="text" placeholder="Search apps..." style="width: 100%; padding: 10px;" />
+                <div class="start-pinned-section">
+                    <div class="top-start-pinned-section">
+                        <h3>Pinned</h3>
+                        <h3>All</h3>
+                    </div>
+                    <div class="pinned-grid">
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/5968/5968890.png" /><span>Microsoft
+                                Edge</span></div>
+                        <div class="app-icon"><img src="https://cdn-icons-png.flaticon.com/128/732/732226.png" /><span>
+                                Word </span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/11384/11384076.png" /><span>Excel</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/906/906314.png" /><span>Powerpoint</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/906/906312.png" /><span>Outlook</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/906/906320.png" /><span>Microsoft
+                                Store</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/3953/3953226.png" /><span>Setting</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/2994/2994900.png" /><span>MicroSoft360
+                                Copilot</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/8610/8610899.png" /><span>Solitaire
+                                & Cassual Games </span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/5968/5968503.png" /><span>Adobe
+                                Express</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/906/906325.png" /><span>Xbox</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/8368/8368314.png" /><span>Microsoft
+                                Clipchamp</span></div>
+                        <div class="app-icon"><img
+                                src="https://imgs.search.brave.com/VgaRzdnzPxA0gvo27sMaUfGKVM-Lcx1aG9nobslE0UU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vUHpJNHVW/alRJWW5UajE4TVN4/RjBPRUhscnU4czlv/Q1N3bXg0bUtYdEZC/dy9yczpmaXQ6NTYw/OjMyMDoxOjAvZzpj/ZS9hSFIwY0hNNkx5/OWpaRzQwL0xtbGpi/MjVtYVc1a1pYSXUv/WTI5dEwyUmhkR0V2/YVdOdi9ibk12Ykc5/bmIzTXRZbkpoL2Jt/UnpMV2x1TFdOdmJH/OXkvY3k4NU1pOWhi/V0Y2YjI0dC9jSEpw/YldVdGJHOW5ieTAx/L01USXVjRzVu.jpeg" /><span>Prime
+                                Video For Windows</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png" /><span>Facebook</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/906/906311.png" /><span>OneNote</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/891/891175.png" /><span>Calculator</span>
+                        </div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/3240/3240587.png" /><span>clock</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/686/686234.png" /><span>Notepad</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/2970/2970785.png" /><span>Paint</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/6301/6301959.png" /><span>File
+                                Explorer</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/3171/3171927.png" /><span>Films &
+                                Tv</span></div>
+                        <div class="app-icon"><img
+                                src="https://cdn-icons-png.flaticon.com/128/6125/6125000.png" /><span>Google
+                                Chrome</span></div>
+
+                    </div>
+
+                </div>
+                <div class="start-recommended-section">
+                    <h3>Recommended </h3>
+                    <div class="recommended">
+                        <div class="rec-item">
+                            <p><strong>Resume.pdf</strong></p>
+                            <span>Recently opened</span>
+                        </div>
+                        <div class="rec-item">
+                            <p><strong>Spotify</strong></p>
+                            <span>Recently used</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="start-footer">
+                    <div class="profile">
+                        <img src="https://img.icons8.com/ios-glyphs/30/user.png" />
+                        <span>Harsh Tewari</span>
+                    </div>
+                    <div class="power">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2529/2529508.png" title="Shut down" />
+                    </div>
+                </div>
+            </div>
+            <div id="teams-app-window">
+                <div class="teams-titlebar">
+                    <div class="window-controls">
+                        <span id="minimize-teams" class="minimize-btn" title="Minimize"><img
+                                src="https://cdn-icons-png.flaticon.com/128/860/860821.png"></span>
+                        <span id="maximize-teams" class="maximize-btn" title="Maximize"><img
+                                src="https://cdn-icons-png.flaticon.com/128/649/649730.png"></span>
+                        <span id="close-teams-app" class="close-btn" title="Close"><img
+                                src="https://cdn-icons-png.flaticon.com/128/1828/1828778.png"></span>
+                    </div>
+                </div>
+                <div class="teams-content">
+                    <div class="teams-header">
+                        <h3>Welcome to Teams</h3>
+                        <h4>Chat and collaborate in one app.</h4>
+                    </div>
+                    <div class="teams-account">
+                        <h3>Pick an account</h3>
+                        <div class="user-account">
+                            <img src="https://cdn-icons-png.flaticon.com/128/16317/16317195.png" alt="" srcset="">
+                            <div class="user-text">
+                                <h4>Harsh Tewari</h4>
+                                <h4>Harshtewari2001@gmail.com</h4>
+                            </div>
+                        </div>
+                        <div class="teams-add-account">
+                            <img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="">
+                            <h3>Use Another Account</h3>
+                        </div>
+                    </div>
+                    <div class="teams-footer">
+                        <h3>Get Microsoft Teams (work or school)</h3>
+                    </div>
+                    <!-- More content here -->
+                </div>
+            </div>
+            <div id="iconContextMenu" class="icon-context-menu">
+                <ul>
+                    <li id="openIcon">Open</li>
+                    <li id="renameIcon">Rename</li>
+                    <li id="deleteIcon">Delete</li>
+                    <li id="propertiesIcon">Properties</li>
+                </ul>
+            </div>
+              
+
+
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+
+</html>
